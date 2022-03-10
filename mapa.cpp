@@ -25,7 +25,7 @@ void mapa::leerArchivo()
                   switch(cont){
 
                       case 0:Nmuro=aux; break;
-                      case 1:ancho=atoi(aux.c_str());break;
+                      case 1:ancho=atoi(aux.c_str());break;    // agg el valor a la variable en string
                       case 2:alto=atoi(aux.c_str());break;
                       case 3:x=atoi(aux.c_str());break;
                       case 4:y=atoi(aux.c_str());break;
@@ -34,12 +34,12 @@ void mapa::leerArchivo()
              }
 
          }
-         muro.AgregarMuro("ancho",ancho);
+         muro.AgregarMuro("ancho",ancho);           // agg el valor que va sacando del texto
          muro.AgregarMuro("alto",alto);
          muro.AgregarMuro("x",x);
          muro.AgregarMuro("y",y);
 
-         mundo.insert(pair<string,muros>(Nmuro,muro));
+         mundo.insert(pair<string,muros>(Nmuro,muro)); // para ir ordenando
          cont=0;
          num+=1;
      }
@@ -49,7 +49,7 @@ void mapa::leerArchivo()
 int mapa::longitudMundo()
 {
     int cont=0;
-    for(it=mundo.begin();it!=mundo.end();it++){
+    for(it=mundo.begin();it!=mundo.end();it++){ // tamaño del mundo
         cont+=1;
     }
 }
