@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imagenes/Pacmandeff.png</file>
+        <file>imagenes/mundo.png</file>
+    </qresource>
+</RCC>
